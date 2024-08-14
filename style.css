@@ -15,6 +15,7 @@ body {
 .main {
     background-image: url('img/back-desk.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     height: 100%;
     height: 100vh;
@@ -22,11 +23,29 @@ body {
     display: flex;
     overflow-x: hidden;
 }
+.coin-top {
+    position: absolute;
+    width: 10vw;
+    left: 20%;
+    top: 0;
+}
+.coin-bottom {
+    position: absolute;
+    width: 10vw;
+    bottom: 5%;
+    left: 23%;
+}
+.coin-right {
+    position: absolute;
+    width: 10vw;
+    right: 0;
+    bottom: 11%;
+}
 .title {
-    font-size: 1.4em;
+    font-size: 2em;
     line-height: 1em;
     color: white;
-    max-width: 55%;
+    max-width: 61%;
 }
 .title-block {
     display: flex;
@@ -48,6 +67,7 @@ body {
 .button {
     background-image: url(img/button.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     width: 26vw;
     height: 105px;
@@ -64,7 +84,8 @@ body {
 }
 .popup-button {
     background-image: url(img/button.png);
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     width: 28%;
     height: 13%;
@@ -121,6 +142,7 @@ body {
     display: none;
     pointer-events: none; 
     background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
     font-size: 1em;
     flex-direction: column;
@@ -144,11 +166,16 @@ body {
     font-weight: 700;
 }
 
+@media only screen and (max-width: 1700px) {
+    .popup-button {
+        background-size: contain;
+    }
+}
+
 @media only screen and (max-width: 1600px) {
     .button {
         background-size: contain;
         left: 18vw;
-        font-size: 0.8em;
     }
     .wheel {
         margin-bottom: 20px;
@@ -158,18 +185,20 @@ body {
         max-width: 33vw;
     }
     .popup-button {
-        font-size: 0.8em;
         width: 31%;
         height: 15%;
         margin-top: 25%;
+        background-size: contain;
     }
-    
+    .title {
+        font-size: 1.6em;
+    }
 }
+
 @media only screen and (max-width: 1440px) {
     .button {
         height: 10vh;
     }
-    
     .popup-price {
         font-size: 2.8em;
     }
@@ -183,17 +212,25 @@ body {
         font-size: 24px;
         line-height: 24px;
     }
-
 }
 
 @media only screen and (max-width: 1024px) {
-    .popup {
-        height: 33%;
-    }
+
     .popup-button {
-        margin-top: 45%;
+        margin-top: 30%;
         height: 10%;
         font-size: 1em;
+    }
+    .popup {
+        width: 90%;
+        height: 42%;
+    }
+    .popup-text {
+        font-size: 2em;
+        line-height: 1em;
+    }
+    .popup-price {
+        font-size: 4em;
     }
 }
 
@@ -219,20 +256,6 @@ body {
     .wheel {
         position: relative;
     }
-    .popup {
-        width: 90%;
-        height: 42%;
-    }
-    .popup-button {
-        width: 80%;
-        height: 14%;
-        position: absolute;
-        top: 45%;
-        font-size: 1.4em;
-    }
-    .popup-text {
-        line-height: 1em;
-    }
     .girl {
         max-width: 60vw;
         right: 0;
@@ -250,19 +273,40 @@ body {
         height: 10vh;
         min-height: 40px;
         font-size: 1.2em;
-        background-size: cover;
+        background-size: contain;
         bottom: 10%;
     }
     .title-block {
         justify-content: left;
     }
+    .coin-top {
+        width: 20vw;
+        left: 35%;
+        top: -16px;
+    }
+    .coin-right {
+        width: 20vw;
+        right: -6px;
+        bottom: 11%;
+    }
+    .coin-bottom {
+        width: 20vw;
+        top: 30%;
+        left: -10%;
+    }
+    .popup-button {
+        width: 80%;
+        height: 14%;
+        position: absolute;
+        top: 38%;
+        font-size: 1.4em;
+    }
 }
 
 @media only screen and (max-width: 520px) {
     .button {
-        background-size: contain;
-        font-size: 0.8em;
         height: 8vh;
+        font-size: 0.8em;
     }
     .title {
         font-size: 1em;
@@ -275,7 +319,14 @@ body {
         height: 33%;
     }
     .popup-button {
-        font-size: 0.8em;
+        font-size: 1em;
         height: 10%;
+        top: 40%;
+    }
+    .popup-text {
+        font-size: 0.8em; 
+    }
+    .popup-price {
+        font-size: 3em;
     }
 }

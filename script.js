@@ -2,12 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let userLang = navigator.language || navigator.userLanguage; 
     let mainTitle = document.querySelector('.title');
     let button = document.querySelector('.button');
-    let popupBg = document.querySelector('.popup-block'); 
-    let popup = document.querySelector('.popup');
     let popupText = document.querySelector('.popup-text');
     let popupButton= document.querySelector('.popup-button');
-    let wheel = document.querySelector('.wheel');
-    let main = document.querySelector('.main');
+   
     
     if (userLang.startsWith('ua')) {
         mainTitle.textContent = 'Крутіть колесо та отримуйте бонуси';
@@ -33,6 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
         popupButton.textContent = 'Próbálja újra';
     }
 
+
+let popupBg = document.querySelector('.popup-block'); 
+let popup = document.querySelector('.popup');
+let wheel = document.querySelector('.wheel');
+let main = document.querySelector('.main');
 
 button.addEventListener("click", openPopup);
 
